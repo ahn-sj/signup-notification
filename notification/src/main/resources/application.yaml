@@ -6,8 +6,17 @@ spring:
   config:
     import: optional:file:.env[.properties]
 
+  cloud:
+    aws:
+      region:
+        static: ${AWS_REGION}
+
 aws:
   sns:
     topic:
       arn:
         user-signup: ${USER_SIGNUP}
+  sqs:
+    queue:
+      name:
+        user-signup: ${WELCOME_EMAIL_QUEUE_NAME}

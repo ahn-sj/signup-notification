@@ -34,8 +34,10 @@ dependencies {
 
     // aws
     implementation(platform("software.amazon.awssdk:bom:2.27.21"))
-    implementation("software.amazon.awssdk:sns")
-    implementation("software.amazon.awssdk:sqs")
+
+    implementation(platform("io.awspring.cloud:spring-cloud-aws-dependencies:3.3.1"))
+    implementation("io.awspring.cloud:spring-cloud-aws-starter-sqs")
+    implementation("io.awspring.cloud:spring-cloud-aws-starter-sns")
 
     // db
     runtimeOnly("com.mysql:mysql-connector-j")
