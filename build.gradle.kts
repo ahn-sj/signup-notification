@@ -24,11 +24,21 @@ repositories {
 }
 
 dependencies {
+    // spring
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
+
+    // lombok
     compileOnly("org.projectlombok:lombok")
-    runtimeOnly("com.mysql:mysql-connector-j")
     annotationProcessor("org.projectlombok:lombok")
+
+    // db
+    runtimeOnly("com.mysql:mysql-connector-j")
+
+    // docker
+    developmentOnly("org.springframework.boot:spring-boot-docker-compose")
+
+    // test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }

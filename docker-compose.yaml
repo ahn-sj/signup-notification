@@ -1,0 +1,12 @@
+services:
+  mysql:
+    image: mysql:8.0.42
+    container_name: mysql-db
+    restart: always
+    environment:
+      - MYSQL_DATABASE=notification
+      - MYSQL_ROOT_PASSWORD=tally
+      - MYSQL_USER=tally
+      - MYSQL_PASSWORD=tally
+    ports:
+      - '3306:3306'
