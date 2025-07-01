@@ -1,0 +1,14 @@
+server:
+  port: 8181
+  shutdown: graceful
+
+# https://docs.spring.io/spring-cloud-config/reference/server/environment-repository/git-backend.html
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ahn-sj/signup-notification
+          search-paths: env-config/**
+          default-label: main
+
