@@ -8,8 +8,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class SqsSignupListener {
 
-    @SqsListener("${aws.sqs.queue.name.user-signup}")
+    @SqsListener("${aws.sqs.queue.name.signup-welcome-email}")
     public void handleWelcomeMail(String rawMessage) {
-        log.info(rawMessage);
+        log.info("[send mail] message = {}", rawMessage);
+    }
+
+    @SqsListener("${aws.sqs.queue.name.signup-welcome-coupon}")
+    public void handleWelcomeCoupon(String rawMessage) {
+        log.info("[issue coupon] message = {}", rawMessage);
     }
 }

@@ -19,4 +19,5 @@ aws:
   sqs:
     queue:
       name:
-        user-signup: ${WELCOME_EMAIL_QUEUE_NAME}
+        signup-welcome-email: ${WELCOME_EMAIL_QUEUE_NAME}
+        signup-welcome-coupon: ${WELCOME_COUPON_QUEUE_NAME}
