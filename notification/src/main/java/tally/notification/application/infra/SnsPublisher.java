@@ -32,8 +32,7 @@ public class SnsPublisher {
                     .build();
 
             final PublishResponse published = snsClient.publish(message);
-            log.info("Published event: {}", published);
-            log.info("Published messageId: {}", published.messageId());
+            log.info("Publishing to SNS topic: {}, payload: {}, messageId: {}", arn, payload, published.messageId());
         } catch (SnsException e) {
             log.error("Publish event failed", e);
             throw e;
