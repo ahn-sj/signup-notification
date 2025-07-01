@@ -32,6 +32,11 @@ dependencies {
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
 
+    // aws
+    implementation(platform("software.amazon.awssdk:bom:2.27.21"))
+    implementation("software.amazon.awssdk:sns")
+    implementation("software.amazon.awssdk:sqs")
+
     // db
     runtimeOnly("com.mysql:mysql-connector-j")
 

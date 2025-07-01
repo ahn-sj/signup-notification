@@ -5,3 +5,9 @@ server:
 spring:
   config:
     import: optional:file:.env[.properties]
+
+aws:
+  sns:
+    topic:
+      arn:
+        user-signup: ${USER_SIGNUP}
